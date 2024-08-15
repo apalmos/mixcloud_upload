@@ -20,11 +20,11 @@ def upload_to_mixcloud(mp3_path, token_file):
         'name': 'API Upload',
         'tags-0-tag': 'Test',
         'tags-1-tag': 'API',
-        'sections-0-chapter': 'Introduction',
-        'sections-0-start_time': '0',
+        # 'sections-0-chapter': 'Introduction',
+        # 'sections-0-start_time': '0',
         'sections-1-artist': 'Artist Name',
         'sections-1-song': 'Song Title',
-        'sections-1-start_time': '10',
+        # 'sections-1-start_time': '10',
         'description': 'My test upload'
     }
 
@@ -52,11 +52,11 @@ def upload_with_curl(mp3_path, token_file):
         '-F', 'name=API Upload',
         '-F', 'tags-0-tag=Test',
         '-F', 'tags-1-tag=API',
-        '-F', 'sections-0-chapter=Introduction',
-        '-F', 'sections-0-start_time=0',
+        # '-F', 'sections-0-chapter=Introduction',
+        # '-F', 'sections-0-start_time=0',
         '-F', 'sections-1-artist=Artist Name',
         '-F', 'sections-1-song=Song Title',
-        '-F', 'sections-1-start_time=10',
+        # '-F', 'sections-1-start_time=10',
         '-F', 'description=My test upload',
         f'https://api.mixcloud.com/upload/?access_token={token}'
     ]
