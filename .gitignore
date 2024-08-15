@@ -64,6 +64,7 @@ db.sqlite3-journal
 # Flask stuff:
 instance/
 .webassets-cache
+access_token 
 
 # Scrapy stuff:
 .scrapy
@@ -76,7 +77,7 @@ docs/_build/latex/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-scripts/testing.ipynb
+testing.ipynb
 
 # IPython
 profile_default/
