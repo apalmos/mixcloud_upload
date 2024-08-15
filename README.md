@@ -24,5 +24,13 @@ Here, you will see the app that you created. Click on the app.
 Now you need to get your client id and also the artist landing page and paste them into this link:
 https://www.mixcloud.com/oauth/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI
 
-Approve the request using this link and now your computer and Mixcloud are connected! 
+
+Approve the request using this link and stay on the webpste. The website address has your landing page + the authorisaion code that you will need to make note of. 
+
+Copy the authorisaion code and now you need to add the original client ID + the landing page + your secret (this is back in the app that you created) + the authorisation code:
+https://www.mixcloud.com/oauth/access_token?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&client_secret=YOUR_CLIENT_SECRET&code=OAUTH_CODE.
+
+Paste everythign and go to the webpage. 
+
+This will give you an access token. This is now how you can log into Mixcloud remotely! Now your computer and Mixcloud are connected! 
 

@@ -76,6 +76,7 @@ docs/_build/latex/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+scripts/testing.ipynb
 
 # IPython
 profile_default/
