@@ -36,12 +36,24 @@ This will give you an access token. This is now how you can log into Mixcloud re
 
 # reading in a Google sheets doc
 
-You first need to set up a Google token. 
+If the sheet is not private, you should be able to access it by getting the sheet id.
 
-1. Go to the Google Developers Console.
-2. Create a new project.
-3. Enable the "Google Sheets API" for the project.
-4. Create credentials for the API, and download the credentials.json file.
+The sheet ID is part of the URL, which looks something like this:
 
-Then follow the code in parse_google_doc.py to read in a Google sheets doc as a pandas df
+```
+https://docs.google.com/spreadsheets/d/<SHEET_ID>/edit#gid=0
+```
+
+You can directly export a sheet to CSV by using the following URL format:
+
+```
+https://docs.google.com/spreadsheets/d/<SHEET_ID>/gviz/tq?tqx=out:csv&sheet=<SHEET_NAME>
+```
+
+Then use the function in 
+
+```
+parse_google_docs.py
+```
+
 

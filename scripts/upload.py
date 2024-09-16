@@ -4,9 +4,7 @@ import subprocess
 def get_access_token(file_path):
     with open(file_path, 'r') as file:
         token_line = file.readline().strip()
-        # Split the line to extract the token value
-        token = token_line.split('=')[1].strip('"')
-        return token
+        return token_line.split('=')[1].strip('"')
 
 def upload_to_mixcloud(mp3_path, token_file):
 

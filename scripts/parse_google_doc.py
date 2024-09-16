@@ -13,3 +13,4 @@ def get_google_sheet():
     df['30m after'] = df['Start time of your show'] + timedelta(minutes=30).dt.time
 
     return df
+
