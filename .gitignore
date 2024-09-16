@@ -154,3 +154,6 @@ $RECYCLE.BIN/
 
 # Virtual environments
 .venv/
+
+#important stuff
+credentials.json

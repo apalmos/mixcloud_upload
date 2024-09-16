@@ -34,3 +34,14 @@ Paste everythign and go to the webpage.
 
 This will give you an access token. This is now how you can log into Mixcloud remotely! Now your computer and Mixcloud are connected! 
 
+# reading in a Google sheets doc
+
+You first need to set up a Google token. 
+
+1. Go to the Google Developers Console.
+2. Create a new project.
+3. Enable the "Google Sheets API" for the project.
+4. Create credentials for the API, and download the credentials.json file.
+
+Then follow the code in parse_google_doc.py to read in a Google sheets doc as a pandas df
+
