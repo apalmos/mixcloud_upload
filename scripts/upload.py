@@ -6,7 +6,7 @@ def get_access_token(file_path):
         token_line = file.readline().strip()
         return token_line.split('=')[1].strip('"')
 
-def upload_to_mixcloud(mp3_path, token_file):
+def upload_to_mixcloud(metadata, token_file):
 
     # read in the access token
     access_token = get_access_token(token_file)
@@ -27,7 +27,7 @@ def upload_to_mixcloud(mp3_path, token_file):
     }
 
     files = {
-        'mp3': (mp3_path, open(mp3_path, 'rb'), 'audio/mpeg')
+        'mp3': (metadata["filepath"], open(metadata["filepath"], 'rb'), 'audio/mpeg')
     }
 
     response = requests.post(url, files=files, data=data)
@@ -36,7 +36,7 @@ def upload_to_mixcloud(mp3_path, token_file):
     print(f"Status Code: {response.status_code}")
     print(f"Response Text: {response.text}")
 
-    if response.status_code in [200, 201]:
+    if response.status_code in {200, 201}:
         print("Upload successful")
     else:
         print(f"Failed to upload. Status code: {response.status_code}")

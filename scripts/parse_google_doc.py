@@ -8,9 +8,12 @@ def get_google_sheet():
 
     df = pd.read_csv(link)
 
-    # Creating new columns '30m before' and '30m after'
-    df['30m before'] = df['Start time of your show'] - timedelta(minutes=30).dt.time
-    df['30m after'] = df['Start time of your show'] + timedelta(minutes=30).dt.time
+    # Ensure 'Start time of your show' is in datetime format
+    df['Start time of your show'] = pd.to_datetime(df['Start time of your show'])
+
+    # Creating new columns '30m before' and '30m after' by subtracting and adding timedelta
+    df['30m before'] = df['Start time of your show'] - timedelta(minutes=30)
+    df['30m after'] = df['Start time of your show'] + timedelta(minutes=30)
 
     return df
 
