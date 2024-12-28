@@ -38,7 +38,7 @@ def main(todays_date):
 
     metadata = get_google_sheet()
 
-    if todays_date:
+    if not todays_date:
         today = datetime.now()
         formatted_date = today.strftime('%Y-%m-%d')
     else:
